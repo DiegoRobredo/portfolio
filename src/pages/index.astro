@@ -1,49 +1,80 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import Experience from '../components/Experience.astro';
-import Badge from '../components/Badge.astro';
-import SocialPill from '../components/SocialPill.astro';
-import GitHubIcon from "../icons/GitHub.astro";
-import LinkedInIcon from "../icons/LinkedIn.astro";
-import MailIcon from "../icons/Mail.astro";
-import BriefCaseIcon from "../icons/BriefCase.astro";
+import Layout from "@/layouts/Layout.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Experience from "@/components/Experience.astro";
+import Projects from "@/components/Projects.astro";
+import Badge from "@/components/Badge.astro";
+import SocialPill from "@/components/SocialPill.astro";
+import GitHubIcon from "@/icons/GitHub.astro";
+import LinkedInIcon from "@/icons/LinkedIn.astro";
+import MailIcon from "@/icons/Mail.astro";
+import BriefCaseIcon from "@/icons/BriefCase.astro";
+import CodeIcon from "@/icons/Code.astro";
 ---
 
-<Layout 
+<Layout
   title="Portfolio de Diego Robredo - Desarrollador y Programador Web con 7 años de experiencia"
   description="Desarrollador web Frontend especializado en JavaScript. Me encanta enfrentarme a cualquier desafío de programación. Explora mi portfolio para ver cómo convierto ideas en realidad a través de código creativo y soluciones innovadoras"
-  >
-	<main>
-    <SectionContainer class="py-44 pb-24">
-      <h1 class="text-5xl font-bold flex flex-row gap-x-4 pb-4">
-        Hola! Soy Diego Robredo <a href="https://www.linkedin.com/in/diegorobredo/" target="_blank" rel="noopener" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a>
+>
+  <main class="px-4">
+    <SectionContainer class="pt-24 pb-32">
+      <div class="flex items-center gap-x-8 mb-4">
+        <img
+          class="rounded-full size-24 object-cover"
+          src="/profile.webp"
+          alt="Diego Robredo photo"
+        />
+        <a
+          href="https://www.linkedin.com/in/diegorobredo/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+          ><Badge>Disponible para trabajar</Badge></a
+        >
+      </div>
+      <h1
+        class="text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hola! Soy Diego Robredo
       </h1>
-      <h2 class="text-xl text-wrap">
-        +7 años de experiencia como <span class="text-yellow-200">Desarrollador Web.</span> <span class="opacity-80">Especializado en convertir ideas en realidad a través de código creativo y soluciones innovadoras</span>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        +7 años de experiencia como <span class="text-yellow-200"
+          >Desarrollador Web.</span
+        >
+        <span class="opacity-80"
+          >Especializado en convertir ideas en realidad a través de código
+          creativo y soluciones innovadoras</span
+        >
       </h2>
 
-      <ul class="mt-4">
-        <li class="flex gap-x-4">
-          <SocialPill href="https://www.linkedin.com/in/diegorobredo/">
-            <LinkedInIcon class="size-6"/>
-            LinkedIn
-          </SocialPill>
-          <SocialPill href="https://www.linkedin.com/in/diegorobredo/">
-            <GitHubIcon class="size-6"/>
-            GitHub
-          </SocialPill>
-          <SocialPill href="mailto:drobredo@gmail.com">
-            <MailIcon class="size-6"/>
-            drobredo@gmail.com
-          </SocialPill>
-        </li>
-      </ul>
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/diegorobredo/">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://www.linkedin.com/in/diegorobredo/">
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:drobredo@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          drobredo@gmail.com
+        </SocialPill>
+      </nav>
     </SectionContainer>
-    
+
     <SectionContainer id="experiencia">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center"><BriefCaseIcon class="size-7"/>Experiencia laboral</h2>
-      <Experience/>
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefCaseIcon class="size-7" />Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />Proyectos
+      </h2>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>

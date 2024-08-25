@@ -1,39 +1,16 @@
 ---
-const NAV_ITEMS = [
-  {
-    title: "Home",
-    label: "home",
-    url: "/#"
-  },
-  {
-    title: "Experiencia",
-    label: "experiencia",
-    url: "/#experiencia"
-  },
-  {
-    title: "Proyectos",
-    label: "proyectos",
-    url: "/#proyectos"
-  },
-  {
-    title: "Sobre mí",
-    label: "sobre-mi",
-    url: "/#sobre-mi"
-  },
-  {
-    title: "Contacto",
-    label: "contacto",
-    url: "/#contacto"
-  }
-]
+import { NAV_ITEMS } from "@/utils/constants";
 ---
 
-<header class="flex justify-between items-center py-6 w-[1120px] mx-auto">
-  <img class="rounded-full size-12" src="/profile.webp" alt="Diego Robredo photo"/>
+<header
+  class="flex justify-center items-center py-6 w-full xl:w-[1120px] mx-auto"
+>
   <nav class="flex flex-row gap-x-10 opacity-80">
     {
       NAV_ITEMS.map((link) => (
-        <a aria-label={link.label} href={link.url}>{link.title}</a>    
+        <a aria-label={link.label} href={link.url}>
+          {link.title}
+        </a>
       ))
     }
   </nav>

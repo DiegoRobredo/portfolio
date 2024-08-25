@@ -1,28 +1,13 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro";
-
-const EXPERIENCE = [
-  {
-    date: "Enero 2023",
-    title: "CTO y Cofundador",
-    company: "Reworld Technologies",
-    description: "Desarrollo y gestión de productos. Supervisión del ciclo de vida completo del desarrollo de productos. Desarrollo de una infraestructura escalable y robusta en AWS. Liderazgo en innovación fomentando una cultura de creatividad y mejora tecnológica continua.",
-    link: "#"
-  },
-  {
-    date: "Septiembre 2016",
-    title: "Senior Consultant",
-    company: "Enzyme Advising Group",
-    description: "Arquitecto y desarrollador de aplicaciones web y mobile en entornos cloud y onpremise. Enfocado principalmente en el desarrollo frontend en múltiples frameworks basados en javascript y al desarrollo backend en Node.js y Python."
-  }
-]
+import ExperienceItem from "@/components/ExperienceItem.astro";
+import { EXPERIENCE } from "@/utils/constants";
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">                  
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
   {
-    EXPERIENCE.map(experience => (
+    EXPERIENCE.map((experience) => (
       <li class="mb-10 ms-4">
-        <ExperienceItem {...experience}/>
+        <ExperienceItem {...experience} />
       </li>
     ))
   }
