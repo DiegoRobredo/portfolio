@@ -1,0 +1,27 @@
+---
+import HTMLIcon from "@/icons/HTML.astro";
+import CSSIcon from "@/icons/CSS3.astro";
+import AWSIcon from "@/icons/AWS.astro";
+import ReactIcon from "@/icons/React.astro";
+import FigmaIcon from "@/icons/Figma.astro";
+
+const {
+  icon
+} = Astro.props
+
+---
+{
+  icon === "HTMLIcon" && <HTMLIcon></HTMLIcon>
+}
+{
+  icon === "CSSIcon" && <CSSIcon></CSSIcon>
+}
+{
+  icon === "AWSIcon" && <AWSIcon></AWSIcon>
+}
+{
+  icon === "ReactIcon" && <ReactIcon></ReactIcon>
+}
+{
+  icon === "FigmaIcon" && <FigmaIcon></FigmaIcon>
+}
