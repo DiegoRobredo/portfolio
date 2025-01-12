@@ -3,9 +3,9 @@ import { NAV_ITEMS } from "@/utils/constants";
 ---
 
 <header
-  class="flex justify-center items-center py-6 w-full xl:w-[1120px] mx-auto"
+  class="fixed top-0 z-10 flex justify-center items-center py-6 w-full mx-auto"
 >
-  <nav class="flex flex-row gap-x-10 opacity-80">
+  <nav class="flex flex-row py-1 px-3 rounded-full gap-x-10">
     {
       NAV_ITEMS.map((link) => (
         <a aria-label={link.label} href={link.url}>
@@ -15,3 +15,66 @@ import { NAV_ITEMS } from "@/utils/constants";
     }
   </nav>
 </header>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
+
+    const callback = (entries: any[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.target.id) {
+          navItems.forEach((item) => {
+            if (item.getAttribute("aria-label") == entry.target.id) {
+              item.classList.add("text-blue-500");
+            } else {
+              item.classList.remove("text-blue-500");
+            }
+          });
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: "-30% 0px -30% 0px",
+      threshold: 0
+    });
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    // Cleanup function
+    document.onvisibilitychange = () => {
+      if (document.visibilityState === "hidden") {
+        observer.disconnect();
+      } else {
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      }
+    };
+  });
+</script>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  nav {
+    @apply dark:bg-gray-800/20 bg-white/80;
+  }
+
+  @keyframes nav-shadown {
+    0% {
+      @apply dark:bg-gray-800/90 bg-white/0;
+    }
+    to {
+      @apply shadow-lg ring-1 backdrop-blur ring-white/40;
+    }
+  }
+</style>

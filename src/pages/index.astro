@@ -10,6 +10,9 @@ import LinkedInIcon from "@/icons/LinkedIn.astro";
 import MailIcon from "@/icons/Mail.astro";
 import BriefCaseIcon from "@/icons/BriefCase.astro";
 import CodeIcon from "@/icons/Code.astro";
+import ProfileCheck from "@/icons/ProfileCheck.astro";
+import AboutMe from "@/components/AboutMe.astro";
+import Contact from "@/components/Contact.astro";
 ---
 
 <Layout
@@ -17,7 +20,7 @@ import CodeIcon from "@/icons/Code.astro";
   description="Desarrollador web Frontend especializado en JavaScript. Me encanta enfrentarme a cualquier desafío de programación. Explora mi portfolio para ver cómo convierto ideas en realidad a través de código creativo y soluciones innovadoras"
 >
   <main class="px-4">
-    <SectionContainer class="pt-24 pb-32">
+    <SectionContainer class="pt-24 pb-32 my-16" id="home">
       <div class="flex items-center gap-x-8 mb-4">
         <img
           class="rounded-full size-24 object-cover"
@@ -49,32 +52,48 @@ import CodeIcon from "@/icons/Code.astro";
 
       <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill href="https://www.linkedin.com/in/diegorobredo/">
-          <LinkedInIcon class="size-4 md:size-6" />
+          <LinkedInIcon class="size-8 md:size-6" />
           LinkedIn
         </SocialPill>
-        <SocialPill href="https://www.linkedin.com/in/diegorobredo/">
-          <GitHubIcon class="size-4 md:size-6" />
+        <SocialPill href="https://github.com/DiegoRobredo">
+          <GitHubIcon class="size-2 md:size-6" />
           GitHub
         </SocialPill>
         <SocialPill href="mailto:drobredo@gmail.com">
-          <MailIcon class="size-4 md:size-6" />
+          <MailIcon class="size-2 md:size-6" />
           drobredo@gmail.com
         </SocialPill>
       </nav>
     </SectionContainer>
 
-    <SectionContainer id="experiencia">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-        <BriefCaseIcon class="size-7" />Experiencia laboral
-      </h2>
-      <Experience />
-    </SectionContainer>
+    <div>
+      <SectionContainer id="experiencia" class="pb-16 my-16">
+        <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+          <BriefCaseIcon class="size-7" />Experiencia laboral
+        </h2>
+        <Experience />
+      </SectionContainer>
 
-    <SectionContainer id="proyectos">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-        <CodeIcon class="size-7" />Proyectos
-      </h2>
-      <Projects />
-    </SectionContainer>
+      <SectionContainer id="proyectos" class="pb-16 my-16">
+        <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+          <CodeIcon class="size-7" />Proyectos
+        </h2>
+        <Projects />
+      </SectionContainer>
+      <SectionContainer id="sobre-mi" class="pb-16 my-16">
+        <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+          <ProfileCheck class="size-8" />
+          Sobre mí
+        </h2>
+        <AboutMe />
+      </SectionContainer>
+      <SectionContainer id="contacto" class="pb-16 my-16">
+        <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+          <MailIcon class="size-7" />
+          Contacto
+        </h2>
+        <Contact />
+      </SectionContainer>
+    </div>
   </main>
 </Layout>

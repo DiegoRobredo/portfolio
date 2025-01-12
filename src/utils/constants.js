@@ -4,8 +4,7 @@ export const EXPERIENCE = [
     title: "CTO y Cofundador",
     company: "Reworld Technologies",
     description:
-      "Desarrollo y gestión de productos. Supervisión del ciclo de vida completo del desarrollo de productos. Desarrollo de una infraestructura escalable y robusta en AWS. Liderazgo en innovación fomentando una cultura de creatividad y mejora tecnológica continua.",
-    link: "#"
+      "Desarrollo y gestión de productos. Supervisión del ciclo de vida completo del desarrollo de productos. Desarrollo de una infraestructura escalable y robusta en AWS. Liderazgo en innovación fomentando una cultura de creatividad y mejora tecnológica continua."
   },
   {
     date: "Septiembre 2016",
