@@ -54,7 +54,7 @@ const PROJECTS = [
 {
   PROJECTS.map(({ title, description, image, repository, tags, url }) => (
     <article
-      class="grid gap-x-4 gap-y-2 py-4"
+      class="img-hover-zoom grid gap-x-4 gap-y-2 py-4"
       style="grid-template-columns: 2fr 3fr; grid-template-rows: auto auto auto auto;"
     >
       <img
@@ -67,14 +67,13 @@ const PROJECTS = [
       </h3>
       <ul class="flex gap-x-2">
         {tags.map(({ name: title, class: className, icon }) => (
-            <li
-              class={`flex gap-x-2 items-center text-xs rounded-full px-2 border border-white/20 bg-white/5 ${className}`}
-            >
-              <TechIcon icon={icon} class="size-4"/>
-              {title}
-            </li>
-          )
-        )}
+          <li
+            class={`flex gap-x-2 items-center text-xs rounded-full px-2 border border-white/20 bg-white/5 ${className}`}
+          >
+            <TechIcon icon={icon} class="size-4" />
+            {title}
+          </li>
+        ))}
       </ul>
       <p class="text-md text-pretty">{description}</p>
       <footer class="flex gap-x-4">
