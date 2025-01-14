@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://diegorobredo.dev/*"
+  to = "https://diegorobredo.com/:splat"
+  status = 301
+  force = true
