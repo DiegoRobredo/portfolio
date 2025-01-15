@@ -3,16 +3,19 @@ import { NAV_ITEMS } from "@/utils/constants";
 ---
 
 <header
-  class="fixed top-0 z-10 flex justify-center items-center py-6 w-full mx-auto"
+  class="fixed backdrop-blur top-0 z-10 flex justify-center items-center py-6 w-full mx-auto"
 >
-  <nav class="flex flex-row py-1 px-3 rounded-full gap-x-10">
-    {
-      NAV_ITEMS.map((link) => (
-        <a aria-label={link.label} href={link.url}>
-          {link.title}
-        </a>
-      ))
-    }
+  <nav class="flex flex-row py-1 justify-between items-center w-full max-w-4xl">
+    <a href="/#"> Diego Robredo </a>
+    <div class="flex flex-row space-x-4">
+      {
+        NAV_ITEMS.map((link) => (
+          <a aria-label={link.label} href={link.url}>
+            {link.title}
+          </a>
+        ))
+      }
+    </div>
   </nav>
 </header>
 
@@ -58,7 +61,7 @@ import { NAV_ITEMS } from "@/utils/constants";
   });
 </script>
 
-<style>
+<!-- <style>
   nav {
     animation: nav-shadown 1s linear both;
     animation-timeline: scroll();
@@ -77,4 +80,4 @@ import { NAV_ITEMS } from "@/utils/constants";
       @apply shadow-lg ring-1 backdrop-blur ring-white/40;
     }
   }
-</style>
+</style> -->

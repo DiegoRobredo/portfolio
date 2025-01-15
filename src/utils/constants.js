@@ -17,27 +17,22 @@ export const EXPERIENCE = [
 
 export const NAV_ITEMS = [
   {
-    title: "Home",
-    label: "home",
-    url: "/#"
-  },
-  {
-    title: "Experiencia",
+    title: "Experience",
     label: "experiencia",
     url: "/#experiencia"
   },
   {
-    title: "Proyectos",
+    title: "Projects",
     label: "proyectos",
     url: "/#proyectos"
   },
   {
-    title: "Sobre mí",
+    title: "About me",
     label: "sobre-mi",
     url: "/#sobre-mi"
   },
   {
-    title: "Contacto",
+    title: "Contact",
     label: "contacto",
     url: "/#contacto"
   }
