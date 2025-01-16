@@ -5,11 +5,18 @@ export default {
     extend: {}
   },
   plugins: [
-    function ({ addUtilities }) {
+    function ({ addUtilities, matchUtilities }) {
       addUtilities({
         ".flex-grow-2": {
           flexGrow: "2"
         }
+      });
+
+      debugger;
+      matchUtilities({
+        "text-clamp": (value) => ({
+          "font-size": `clamp(${value.split("-").join(",")})`
+        })
       });
     }
   ]
