@@ -1,29 +1,28 @@
 ---
-import Badge from "@/components/Badge.astro";
+import ProfessinoalLink from "@/components/ProfessinoalLink.astro";
+import GitHubIcon from "@/icons/GitHub.astro";
+import LinkedInIcon from "@/icons/LinkedIn.astro";
+import MailIcon from "@/icons/Mail.astro";
 ---
 
-<!-- 
-<div class="flex items-center gap-x-8 mb-4">
-  <img
-    class="rounded-full size-24 object-cover"
-    src="/profile.webp"
-    alt="Diego Robredo photo"
-  />
-  <a
-    href="https://www.linkedin.com/in/diegorobredo/"
-    target="_blank"
-    rel="noopener"
-    class="flex justify-center items-center"
-    ><Badge>Disponible para trabajar</Badge></a
-  >
-</div> -->
-<h1 class="text-9xl font-bold mb-4">Frontend Developer & Cloud Engineer</h1>
+<h1 class="text-clamp-[2rem-10vw-8rem] leading-none font-bold mb-4">
+  Frontend <span class="gradient-text">Developer</span> & Software Engineer
+</h1>
 <h2 class="text-xl text-wrap w-[70%]">
-  +7 años de experiencia como <span class="text-yellow-200"
-    >Desarrollador Web.</span
-  >
-  <span class="opacity-80"
-    >Especializado en convertir ideas en realidad a través de código creativo y
-    soluciones innovadoras</span
-  >
+  Hi! I'm Diego Robredo, a Frontend Developer continuously learning and focused
+  on JavaScript frameworks to breathe life into web applications.
 </h2>
+<nav class="flex gap-4 mt-8 flex-wrap">
+  <ProfessinoalLink href="https://www.linkedin.com/in/diegorobredo/">
+    <!-- <LinkedInIcon class="size-8 md:size-6" /> -->
+    LinkedIn
+  </ProfessinoalLink>
+  <ProfessinoalLink href="https://github.com/DiegoRobredo">
+    <!-- <GitHubIcon class="size-2 md:size-6" /> -->
+    GitHub
+  </ProfessinoalLink>
+  <ProfessinoalLink href="mailto:drobredo@gmail.com">
+    <!-- <MailIcon class="size-2 md:size-6" /> -->
+    Email
+  </ProfessinoalLink>
+</nav>

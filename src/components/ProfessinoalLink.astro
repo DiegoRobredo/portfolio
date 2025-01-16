@@ -1,0 +1,40 @@
+<a
+  class="professional-link"
+  target="_blank"
+  rel="noopener noreferrer"
+  {...Astro.props}
+>
+  <span class="link-text" data-astro-cid-yxtifmrq=""><slot /></span>
+</a>
+
+<style>
+  .professional-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .professional-link {
+    font-size: clamp(1rem, 6vw, 2rem);
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+    position: relative;
+    width: fit-content;
+  }
+
+  .professional-link:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: var(--text);
+    transition: width 0.3s ease;
+  }
+
+  .professional-link:hover:after {
+    width: 100%;
+  }
+</style>
