@@ -3,10 +3,10 @@ import ExperienceItem from "@/components/ExperienceItem.astro";
 import { EXPERIENCE } from "@/utils/constants";
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+<ol class="relative">
   {
     EXPERIENCE.map((experience) => (
-      <li class="mb-10 ms-4">
+      <li class="mb-20">
         <ExperienceItem {...experience} />
       </li>
     ))
