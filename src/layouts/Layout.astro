@@ -37,7 +37,20 @@ const { description, title } = Astro.props;
 <style is:global>
   :root {
     color-scheme: light dark;
+    --gradient: linear-gradient(to right, #4a6bff, #00ff85);
+    --background: #0a0a0a;
+    --text: #ffffff;
+    --accent: #00ff85;
   }
+
+  .gradient-text,
+  .gradient-hover:hover {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
     scroll-behavior: smooth;
