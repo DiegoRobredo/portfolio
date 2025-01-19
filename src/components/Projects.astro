@@ -55,7 +55,7 @@ const PROJECTS = [
   PROJECTS.map(({ title, description, image, repository, tags, url }) => (
     <article
       class="img-hover-zoom grid gap-x-4 gap-y-2 py-4"
-      style="grid-template-columns: 2fr 3fr; grid-template-rows: auto auto auto auto;"
+      style="grid-template-columns: 2fr 3fr; grid-template-rows: auto auto auto 1fr;"
     >
       <img
         alt={`Captura de pantalla del proyecto "${title}"`}
@@ -65,6 +65,7 @@ const PROJECTS = [
       <h3 class="text-xl font-semibold text-gray-900 dark:text-yellow-200">
         {title}
       </h3>
+      <p class="text-md text-pretty">{description}</p>
       <ul class="flex gap-x-2">
         {tags.map(({ name: title, class: className, icon }) => (
           <li
@@ -75,7 +76,6 @@ const PROJECTS = [
           </li>
         ))}
       </ul>
-      <p class="text-md text-pretty">{description}</p>
       <footer class="flex gap-x-4">
         {url && <button>Preview</button>}
         {repository && <button>Github</button>}
