@@ -14,7 +14,7 @@ const { job, job_description, company, company_info, from, to, link } =
 ---
 
 <article
-  class="flex border-1 p-4 justify-between rounded-lg border border-gray-600 bg-gray-800 animated-border cursor-pointer gap-2"
+  class="experience-item flex border-1 p-4 justify-between rounded-lg border border-gray-600 bg-gray-800 animated-border cursor-pointer gap-2"
 >
   <div class="basis-1/2">
     <h3 class="text-4xl font-semibold text-yellow-200">
@@ -25,13 +25,15 @@ const { job, job_description, company, company_info, from, to, link } =
     </p>
   </div>
   <div class="basis-1/2">
-    <h4 class="text-3xl">
+    <h4 class="text-2xl font-semibold text-gray-400">
       {job}
     </h4>
     <p>
       {job_description}
     </p>
-    <div class="flex flew-row gap-1 mb-1 justify-end text-sm font-normal leading-none text-gray-500">
+    <div
+      class="flex flew-row gap-1 mb-1 justify-end text-sm font-normal leading-none text-gray-500"
+    >
       <time class="mb-1 text-sm font-normal leading-none text-gray-500">
         {from}
       </time>
@@ -42,3 +44,14 @@ const { job, job_description, company, company_info, from, to, link } =
     </div>
   </div>
 </article>
+
+<style>
+  .experience-item {
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+  .experience-item:hover {
+    opacity: 1;
+    transform: translate(10px);
+  }
+</style>

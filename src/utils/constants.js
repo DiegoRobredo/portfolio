@@ -7,7 +7,7 @@ export const EXPERIENCE = [
       "Consulting firm specializing in transforming business operations and processes through emerging technologies",
     job: "Lead Developer",
     job_description:
-      "Web and mobile application architect and developer for cloud and on-premise environments. Specialized in frontend development using various JavaScript frameworks and backend development with Node.js and Python"
+      "Web and mobile application architect technical team lead for cloud and on-premise environments. Specialized in SAP solutions and frontend development with SAPUI5 framework"
   },
   {
     from: "January 2023",
@@ -27,7 +27,7 @@ export const EXPERIENCE = [
     company_info:
       "Tech consulting firm specializing in transforming business operations through emerging technologies",
     job_description:
-      "Web and mobile application architect and developer for cloud and on-premise SAP environments. Focused on frontend development with JavaScript frameworks and backend with Node.js and Python"
+      "Web and mobile application architect and developer for cloud and on-premise SAP environments. Focused on frontend development with JavaScript frameworks"
   }
 ];
 
@@ -46,10 +46,5 @@ export const NAV_ITEMS = [
     title: "About me",
     label: "sobre-mi",
     url: "/#sobre-mi"
-  },
-  {
-    title: "Contact",
-    label: "contacto",
-    url: "/#contacto"
   }
 ];

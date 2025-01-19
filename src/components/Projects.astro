@@ -33,16 +33,16 @@ const PROJECTS = [
   {
     title: "OHLIVE",
     description:
-      "Aplicación móvil para presentar un catálogo de productos 3D en Realidad Aumentada. Desarrollada desde cero con React. Arquitectura cloud desarrollada mediante servicios AWS",
+      "Mobile application for presenting a 3D product catalog in Augmented Reality. Developed from scratch using React. Cloud architecture implemented using AWS services",
     image: "/projects/Ohlive.webp",
     repository: "",
     url: "",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.AWS, TAGS.REACT]
   },
   {
-    title: "Diseño de aplicación móvil",
+    title: "Mobile application design",
     description:
-      "Diseño de la interfaz de una aplicación móvil desarrollada con Figma. Se prototipan las interacciones entre las diferentes pantallas y elementos de la aplicación",
+      "Interface design for a mobile application developed with Figma. Interactions between different screens and elements of the application are prototyped",
     image: "/projects/Prototype.webp",
     repository: "",
     url: "",
@@ -68,7 +68,7 @@ const PROJECTS = [
       <ul class="flex gap-x-2">
         {tags.map(({ name: title, class: className, icon }) => (
           <li
-            class={`flex gap-x-2 items-center text-xs rounded-full px-2 border border-white/20 bg-white/5 ${className}`}
+            class={`h-10 p-4 flex gap-x-2 items-center text-xs rounded-full border border-white/20 bg-white/5 ${className}`}
           >
             <TechIcon icon={icon} class="size-4" />
             {title}
