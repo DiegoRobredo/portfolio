@@ -1,4 +1,6 @@
 ---
+import ExternalLink from "@/icons/ExternalLink.astro";
+
 interface Props {
   job: string;
   job_description: string;
@@ -17,9 +19,12 @@ const { job, job_description, company, company_info, from, to, link } =
   class="experience-item flex border-1 p-4 justify-between rounded-lg border border-gray-600 bg-gray-800 animated-border cursor-pointer gap-2"
 >
   <div class="basis-1/2">
-    <h3 class="text-4xl font-semibold text-yellow-200">
-      {company}
-    </h3>
+    <div class="flex flex-row items-center">
+      <h3 class="text-4xl font-semibold text-yellow-200">
+        {company}
+      </h3>
+      <ExternalLink class="ml-4 external-link" />
+    </div>
     <p>
       {company_info}
     </p>
@@ -53,5 +58,13 @@ const { job, job_description, company, company_info, from, to, link } =
   .experience-item:hover {
     opacity: 1;
     transform: translate(10px);
+  }
+  .external-link {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .experience-item:hover .external-link {
+    opacity: 0.7;
   }
 </style>
