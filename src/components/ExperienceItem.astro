@@ -16,12 +16,12 @@ const { job, job_description, company, company_info, from, to, link } =
 ---
 
 <a
-  class="experience-item flex border-1 p-4 justify-between rounded-lg border border-gray-600 bg-gray-800 animated-border cursor-pointer gap-4"
+  class="responsive-grid experience-item border-1 p-4 justify-between rounded-lg border border-gray-600 bg-gray-800 animated-border cursor-pointer gap-4"
   rel="noopener noreferrer"
   target="_blank"
   href={link}
 >
-  <div class="basis-1/2">
+  <div>
     <div class="flex flex-row items-center">
       <h3 class="text-4xl font-semibold text-yellow-200">
         {company}
@@ -32,7 +32,7 @@ const { job, job_description, company, company_info, from, to, link } =
       {company_info}
     </p>
   </div>
-  <div class="basis-1/2">
+  <div>
     <h4 class="text-2xl font-semibold text-gray-400">
       {job}
     </h4>
@@ -69,5 +69,10 @@ const { job, job_description, company, company_info, from, to, link } =
 
   .experience-item:hover .external-link {
     opacity: 0.7;
+  }
+
+  .responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 </style>
