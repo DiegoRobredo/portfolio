@@ -1,27 +1,15 @@
 ---
-import HTMLIcon from "@/icons/HTML.astro";
-import CSSIcon from "@/icons/CSS3.astro";
-import AWSIcon from "@/icons/AWS.astro";
-import ReactIcon from "@/icons/React.astro";
-import FigmaIcon from "@/icons/Figma.astro";
+import HTMLIcon from "@/icons/html-logo.astro";
+import CSSIcon from "@/icons/css-logo.astro";
+import AWSIcon from "@/icons/aws-logo.astro";
+import ReactIcon from "@/icons/react-logo.astro";
+import FigmaIcon from "@/icons/figma-logo.astro";
 
-const {
-  icon
-} = Astro.props
-
+const { icon } = Astro.props;
 ---
-{
-  icon === "HTMLIcon" && <HTMLIcon></HTMLIcon>
-}
-{
-  icon === "CSSIcon" && <CSSIcon></CSSIcon>
-}
-{
-  icon === "AWSIcon" && <AWSIcon></AWSIcon>
-}
-{
-  icon === "ReactIcon" && <ReactIcon></ReactIcon>
-}
-{
-  icon === "FigmaIcon" && <FigmaIcon></FigmaIcon>
-}
+
+{icon === "HTMLIcon" && <HTMLIcon {...Astro.props} />}
+{icon === "CSSIcon" && <CSSIcon {...Astro.props} />}
+{icon === "AWSIcon" && <AWSIcon {...Astro.props} />}
+{icon === "ReactIcon" && <ReactIcon {...Astro.props} />}
+{icon === "FigmaIcon" && <FigmaIcon {...Astro.props} />}
