@@ -1,9 +1,16 @@
 ---
-import "@fontsource-variable/onest";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
-import "@fontsource-variable/space-grotesk";
+import '@fontsource/onest/100.css';
+import '@fontsource/onest/200.css';
+import '@fontsource/onest/300.css';
+import '@fontsource/onest/400.css';
+import '@fontsource/onest/500.css';
+import '@fontsource/onest/600.css';
+import '@fontsource/onest/700.css';
+import '@fontsource/onest/800.css';
+import '@fontsource/onest/900.css';
 
 interface Props {
   title: string;
@@ -27,7 +34,7 @@ const { description, title } = Astro.props;
     <ViewTransitions />
   </head>
 </html>
-<body>
+<body class="font-mono">
   <div
     class="absolute inset-0 -z-10 h-full w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
   >

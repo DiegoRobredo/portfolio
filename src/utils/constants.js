@@ -53,3 +53,18 @@ export const NAV_ITEMS = [
     url: "/#sobre-mi"
   }
 ];
+
+export const SOCIAL_LINKS = [
+  {
+    href: "https://www.linkedin.com/in/diegorobredo/",
+    text: "LinkedIn"
+  },
+  {
+    href: "https://github.com/DiegoRobredo",
+    text: "GitHub"
+  },
+  {
+    href: "mailto:drobredo@gmail.com",
+    text: "Email"
+  }
+];

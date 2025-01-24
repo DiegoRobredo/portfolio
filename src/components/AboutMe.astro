@@ -1,31 +1,44 @@
 ---
 const personalImageAlt = "Diego Robredo";
+import { SOCIAL_LINKS } from "@/utils/constants";
+import ProfessinoalLink from "@/components/ProfessinoalLink.astro";
 ---
 
 <article
   class="flex flex-col items-center justify-center gap-8 text-gray-300 md:flex-row"
 >
   <div
-    class="[&>p]:mb-4 [&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+    class="[&>p]:mb-4 [&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty"
   >
     <p>
-      Hello! My name is Diego Robredo, and I'm passionate about software
-      development, especially in JavaScript! I've always loved puzzles and logic
-      games. For me, programming challenges are just another form of
-      entertainment, which is why I love coding and tackling new challenges!
+      Hello! My name is <strong class="font-bold">Diego Robredo</strong>, and
+      I'm passionate about software development, especially in <strong
+        >JavaScript</strong
+      >! I've always loved puzzles and logic games. For me, programming
+      challenges are just another form of entertainment, which is why I love
+      coding and tackling new challenges!
     </p>
 
     <p>
       In addition to developing Frontend applications in my daily work, I've
-      also started a small startup called Ohlive. It's an app for viewing
-      furniture in Augmented Reality. It's a concept that's hard to explain but
-      very easy to understand when you see it in action.
+      also started a small startup called <strong
+        ><a
+          class="personal-link"
+          href="https://www.ohlive.app/"
+          target="_blank"
+          rel="noopener noreferrer">Ohlive</a
+        ></strong
+      >. It's an app for viewing furniture in Augmented Reality. It's a concept
+      that's hard to explain but very easy to understand when you see it in
+      action.
     </p>
 
     <p>
       If you're interested in my profile or the projects I've worked on and want
-      to learn more or propose a new challenge, feel free to contact me! I love
-      always thinking about new challenges and opportunities!
+      to learn more or propose a new challenge, feel free to <strong
+        ><a class="personal-link" href="mailto:drobredo@gmail.com">contact me</a
+        ></strong
+      >! I love always thinking about new challenges and opportunities!
     </p>
   </div>
 
@@ -38,3 +51,23 @@ const personalImageAlt = "Diego Robredo";
     style="object-position: 50% 50%"
   />
 </article>
+
+<style>
+  .personal-link {
+    position: relative;
+  }
+  .personal-link:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0%;
+    height: 2px;
+    background-color: #fef9c3;
+    transition: width 0.4s ease;
+  }
+
+  .personal-link:hover:after {
+    width: 100%;
+  }
+</style>
