@@ -8,7 +8,7 @@ import ProfessinoalLink from "@/components/ProfessinoalLink.astro";
   class="flex flex-col items-center justify-center gap-8 text-gray-300 md:flex-row"
 >
   <div
-    class="[&>p]:mb-4 [&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty"
+    class="order-2 md:order-1 [&>p]:mb-4 [&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty"
   >
     <p>
       Hello! My name is <strong class="font-bold">Diego Robredo</strong>, and
@@ -43,11 +43,9 @@ import ProfessinoalLink from "@/components/ProfessinoalLink.astro";
   </div>
 
   <img
-    width="200"
-    height="200"
     src="/profile.webp"
     alt={personalImageAlt}
-    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-yellow-500/5 ring-1 ring-white/20"
+    class="order-1 object-cover w-64 p-1 md:order-2 rotate-3 lg:p-2 aspect-square rounded-2xl bg-yellow-500/5 ring-1 ring-white/20"
     style="object-position: 50% 50%"
   />
 </article>
