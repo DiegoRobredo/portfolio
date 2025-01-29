@@ -15,7 +15,7 @@ export const EXPERIENCE = [
   {
     from: "January 2023",
     to: "Present",
-    job: "CTO y Cofundador",
+    job: "CTO / Cofounder",
     company: "Reworld Technologies",
     company_info:
       "Aims to revolutionize how people engage with their surroundings by creating a platform to discover and share unique experiences globally",
