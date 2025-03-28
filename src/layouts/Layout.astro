@@ -1,7 +1,4 @@
 ---
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
 import "@fontsource/onest/100.css";
 import "@fontsource/onest/200.css";
 import "@fontsource/onest/300.css";
@@ -11,6 +8,8 @@ import "@fontsource/onest/600.css";
 import "@fontsource/onest/700.css";
 import "@fontsource/onest/800.css";
 import "@fontsource/onest/900.css";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
 
 interface Props {
   title: string;
@@ -24,14 +23,24 @@ const { description, title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/profile.webp" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#09f" />
-
     <title>{title}</title>
-    <ViewTransitions />
+
+    <meta name="theme-color" content="#09f" />
+    <link rel="icon" type="image/svg+xml" href="/images/profile.webp" />
+
+    <meta name="description" content={description} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="DiegoRobredo" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/images/lolalolitaland-hero.webp" />
+    <meta property="og:url" content="https://diegorobredo.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Diego Robredo's Portfolio" />
   </head>
 </html>
 <body class="font-mono">

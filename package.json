@@ -3,16 +3,16 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev --open http://localhost:4321/",
+    "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/tailwind": "^6.0.2",
     "@fontsource/onest": "^5.1.1",
-    "astro": "^4.5.9",
+    "astro": "^5.5.5",
     "install": "^0.13.0",
     "npm": "^11.0.0",
     "tailwindcss": "^3.4.1"
