@@ -43,19 +43,42 @@ const { description, title } = Astro.props;
       crossorigin="anonymous"
     />
 
-    <meta name="description" content={description} />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="DiegoRobredo" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="/images/card_image.webp" />
+    <!-- HTML Meta Tags -->
+    <title>
+      Diego Robredo's Portfolio - Frontend Developer & Software Engineer
+    </title>
+    <meta
+      name="description"
+      content="Frontend Web Developer specialized in JavaScript. I love tackling any programming challenge. Explore my portfolio to see how I turn ideas into reality through creative code and innovative solutions"
+    />
 
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="/images/card_image.webp" />
+    <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://diegorobredo.com/" />
     <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Diego Robredo's Portfolio - Frontend Developer & Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Frontend Web Developer specialized in JavaScript. I love tackling any programming challenge. Explore my portfolio to see how I turn ideas into reality through creative code and innovative solutions"
+    />
+    <meta property="og:image" content="/images/card_image.webp" />
     <meta property="og:site_name" content="Diego Robredo's Portfolio" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="diegorobredo.com" />
+    <meta property="twitter:url" content="https://diegorobredo.com/" />
+    <meta
+      name="twitter:title"
+      content="Diego Robredo's Portfolio - Frontend Developer & Software Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="Frontend Web Developer specialized in JavaScript. I love tackling any programming challenge. Explore my portfolio to see how I turn ideas into reality through creative code and innovative solutions"
+    />
+    <meta name="twitter:image" content="/images/card_image.webp" />
   </head>
 </html>
 <body class="font-mono">
